@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c6d35bc24131d42a9fae58b0639a4b, type: 3}
+  m_Name: BuyHoneyJar
+  m_EditorClassIdentifier: 
+  Price: 10
+  Resource: {fileID: 11400000, guid: 149e24be02f4930439a7227368299caf, type: 2}
+  BuyableItem: {fileID: 11400000, guid: 9a7a86f428b974743a8adda376f3813b, type: 2}
