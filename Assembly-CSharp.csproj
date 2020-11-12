@@ -56,12 +56,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ResourceProducer.cs" />
-    <Compile Include="Assets\Scripts\SetUp.cs" />
-    <Compile Include="Assets\Scripts\Resource.cs" />
-    <Compile Include="Assets\Scripts\ResourceUI.cs" />
-    <Compile Include="Assets\Scripts\ResourceAmount.cs" />
-    <Compile Include="Assets\Scripts\PressBeeHive.cs" />
+    <Compile Include="Assets\Scripts\Sophie_Scripts\ResourceProducer.cs" />
+    <Compile Include="Assets\Scripts\Sophie_Scripts\ResourceAmount.cs" />
+    <Compile Include="Assets\Scripts\Sophie_Scripts\SetUp.cs" />
+    <Compile Include="Assets\Scripts\Sophie_Scripts\ResourceUI.cs" />
+    <Compile Include="Assets\Scripts\Sophie_Scripts\Resource.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
