@@ -5,12 +5,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject BeehiveEnterButton;
-    EnterExitBeehive EnterExitBeehive;
+   public GameObject[] EnterExitButtons;
+
+   public EnterExitStore[] EnterExitStore;
+
     float[] TimeScales = { 0, 1 };
     void Start()
     {
-        EnterExitBeehive = BeehiveEnterButton.GetComponent<EnterExitBeehive>();
+
+        for(int i = 0; i< EnterExitButtons.Length; i++)
+        {
+            EnterExitStore[i] = EnterExitButtons[i].GetComponent<EnterExitStore>();
+        }
+
     }
 
     void Update()
@@ -20,14 +27,17 @@ public class GameManager : MonoBehaviour
 
   void PauseGame()
     {
-        if (EnterExitBeehive.BeehiveMenuActive)
+        for (int i = 0; i < EnterExitButtons.Length; i++)
         {
-            Time.timeScale = TimeScales[0];
-        }
-        else
-        {
-            Time.timeScale = TimeScales[1];
+            if (EnterExitStore[i].MenuActive)
+            {
+                Time.timeScale = TimeScales[0];
+            }
+            else
+            {
+                Time.timeScale = TimeScales[1];
 
+            }
         }
     }
 }
