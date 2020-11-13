@@ -1,11 +1,16 @@
 ﻿using System;
+using UnityEngine;
+
+/* Activate for testing
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+*/
+
 
 public class Date : MonoBehaviour
 {
+    // Activate for testing
     //public TextMeshPro dateText;
     
     private const string saveName = "Last login date: ";
