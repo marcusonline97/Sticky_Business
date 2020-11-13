@@ -43,4 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a644738063ea841ad154ff3bfbaf57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeehiveEnterButton: {fileID: 0}
+  EnterExitButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  EnterExitStore:
+  - {fileID: 0}
+  - {fileID: 0}
