@@ -5,8 +5,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class BuyableUI : MonoBehaviour
 {
-    public Text BuyableText;
-    Color[] colors = { Color.black, Color.red };
+    public Image Door;
+    Color[] colors = { Color.white, Color.grey };
 
     public Buyable buyable;
 
@@ -19,11 +19,11 @@ public class BuyableUI : MonoBehaviour
     {
         if (buyable.CanBuyItem)
         {
-            BuyableText.color = colors[0];
+            Door.color = colors[0];
         }
         else
         {
-            BuyableText.color = colors[1];
+            Door.color = colors[1];
 
         }
     }
