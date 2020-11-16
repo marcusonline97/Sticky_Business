@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public KeyCode ResetButton;
    public GameObject[] EnterExitButtons;
 
    public EnterExitStore[] EnterExitStore;
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         PauseGame();
+        ResetGame();
+
     }
 
   void PauseGame()
@@ -38,6 +41,14 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = TimeScales[1];
 
             }
+        }
+    }
+
+    void ResetGame()
+    {
+        if (Input.GetKey(ResetButton))
+        {
+            PlayerPrefs.DeleteAll();
         }
     }
 }
