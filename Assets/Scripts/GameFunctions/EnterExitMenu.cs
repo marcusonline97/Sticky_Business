@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class EnterExitStore : MonoBehaviour
+public class EnterExitMenu : MonoBehaviour
 {
     public bool MenuActive;
     public GameObject Menu;

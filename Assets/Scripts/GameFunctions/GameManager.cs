@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public KeyCode ResetButton;
    public GameObject[] EnterExitButtons;
 
-   public EnterExitStore[] EnterExitStore;
+   public EnterExitMenu[] EnterExitMenu;
 
     float[] TimeScales = { 0, 1 };
     void Start()
@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
         for(int i = 0; i< EnterExitButtons.Length; i++)
         {
-            EnterExitStore[i] = EnterExitButtons[i].GetComponent<EnterExitStore>();
+            EnterExitMenu[i] = EnterExitButtons[i].GetComponent<EnterExitMenu>();
         }
 
     }
@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < EnterExitButtons.Length; i++)
         {
-            if (EnterExitStore[i].MenuActive)
+            if (EnterExitMenu[i].MenuActive)
             {
                 Time.timeScale = TimeScales[0];
             }
