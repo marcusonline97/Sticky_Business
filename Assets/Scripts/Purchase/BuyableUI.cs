@@ -8,7 +8,6 @@ public class BuyableUI : MonoBehaviour
     void Update()
     {
         buyable.TradeResource();
-        Debug.Log(buyable.ItemBought);
     }
 
 }

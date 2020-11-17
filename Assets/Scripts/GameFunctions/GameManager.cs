@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-   public KeyCode ResetButton;
-   public GameObject[] EnterExitButtons;
+    public KeyCode ResetButton;
+    public GameObject[] EnterExitButtons;
 
-   public EnterExitMenu[] EnterExitMenu;
+    public EnterExitMenu[] EnterExitMenu;
     public Buyable buyable;
     public GameObject HoneyJar;
 
@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        for(int i = 0; i< EnterExitButtons.Length; i++)
+        for (int i = 0; i < EnterExitButtons.Length; i++)
         {
             EnterExitMenu[i] = EnterExitButtons[i].GetComponent<EnterExitMenu>();
         }
@@ -28,36 +28,35 @@ public class GameManager : MonoBehaviour
         PauseGame();
         ResetGame();
 
-        if (buyable.CanTradeItem)
+        if (buyable.ItemBought)
         {
-            Debug.Log("Hello");
-            GameObject Jar = Instantiate(HoneyJar, transform.position, HoneyJar.transform.rotation);
-            Jar.transform.parent = gameObject.transform;
+            GameObject Jar = Instantiate(HoneyJar);
+            Jar.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
+
         }
 
-    }
-
-  void PauseGame()
-    {
-        for (int i = 0; i < EnterExitButtons.Length; i++)
+        void PauseGame()
         {
-            if (EnterExitMenu[i].MenuActive)
+            for (int i = 0; i < EnterExitButtons.Length; i++)
             {
-                Time.timeScale = TimeScales[0];
-            }
-            else
-            {
-                Time.timeScale = TimeScales[1];
+                if (EnterExitMenu[i].MenuActive)
+                {
+                    Time.timeScale = TimeScales[0];
+                }
+                else
+                {
+                    Time.timeScale = TimeScales[1];
 
+                }
             }
         }
-    }
 
-    void ResetGame()
-    {
-        if (Input.GetKey(ResetButton))
+        void ResetGame()
         {
-            PlayerPrefs.DeleteAll();
+            if (Input.GetKey(ResetButton))
+            {
+                PlayerPrefs.DeleteAll();
+            }
         }
     }
 }
