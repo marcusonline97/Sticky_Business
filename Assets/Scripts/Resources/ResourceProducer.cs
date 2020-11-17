@@ -31,14 +31,16 @@ namespace Resources
 			this.upgrade.Update();
 		}
 
-		void UpdateProduction()
+		public void UpdateProduction()
 		{
 			this.elapsedTime += Time.deltaTime;
-			if (this.elapsedTime >= this.Data.ProductionTime)
-			{
-				Produce();
-				this.elapsedTime -= this.Data.ProductionTime;
-			}
+			
+				if (this.elapsedTime >= this.Data.ProductionTime)
+				{
+				    Produce();
+					this.elapsedTime -= this.Data.ProductionTime;
+				}
+			    
 		}
 
 		void UpdateTitleLabel()

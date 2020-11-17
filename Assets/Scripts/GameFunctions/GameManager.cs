@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public KeyCode ResetButton;
+   public KeyCode ResetButton;
    public GameObject[] EnterExitButtons;
 
    public EnterExitMenu[] EnterExitMenu;
