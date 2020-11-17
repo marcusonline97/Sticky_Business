@@ -629,6 +629,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Honeyjar
       objectReference: {fileID: 0}
+    - target: {fileID: 9206243987380824193, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 66.20921
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206243987380824193, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 43
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
 --- !u!224 &1965287692 stripped
