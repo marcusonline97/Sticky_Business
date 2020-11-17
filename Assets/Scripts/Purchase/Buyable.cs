@@ -10,6 +10,7 @@ public class Buyable : ScriptableObject
     public int Price;
     public Resource Resource;
     public Resource BuyableItem;
+    public bool ItemBought;
 
     public bool CanTradeItem
     {
@@ -23,11 +24,19 @@ public class Buyable : ScriptableObject
     {
         if (CanTradeItem) 
         { 
-        Resource.OwnedResource -= Price;
-
+            Resource.OwnedResource -= Price;
+            
             BuyableItem.Produce();
+
+            ItemBought = true;
         }
-       
+
+        else
+        {
+            ItemBought = false;
+
+        }
+
     }
 
     

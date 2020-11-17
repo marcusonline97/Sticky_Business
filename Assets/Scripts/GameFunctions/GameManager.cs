@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
    public GameObject[] EnterExitButtons;
 
    public EnterExitMenu[] EnterExitMenu;
+    public Buyable buyable;
+    public GameObject HoneyJar;
 
     float[] TimeScales = { 0, 1 };
     void Start()
@@ -25,6 +27,13 @@ public class GameManager : MonoBehaviour
     {
         PauseGame();
         ResetGame();
+
+        if (buyable.CanTradeItem)
+        {
+            Debug.Log("Hello");
+            GameObject Jar = Instantiate(HoneyJar, transform.position, HoneyJar.transform.rotation);
+            Jar.transform.parent = gameObject.transform;
+        }
 
     }
 
