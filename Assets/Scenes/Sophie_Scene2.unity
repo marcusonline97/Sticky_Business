@@ -624,6 +624,7 @@ PrefabInstance:
     - target: {fileID: 5711984571416733434, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_Name
       value: Canvas
+<<<<<<< Updated upstream
       objectReference: {fileID: 0}
     - target: {fileID: 5711984571865291776, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_Name
@@ -636,6 +637,12 @@ PrefabInstance:
     - target: {fileID: 9206243987380824193, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 43
+=======
+>>>>>>> Stashed changes
+      objectReference: {fileID: 0}
+    - target: {fileID: 5711984571865291776, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
+      propertyPath: m_Name
+      value: Honeyjar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
