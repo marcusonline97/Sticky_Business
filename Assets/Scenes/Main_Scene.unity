@@ -374,6 +374,10 @@ PrefabInstance:
       propertyPath: Datas.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 522788238b8d1bd42a54cc78203ecddf, type: 2}
+    - target: {fileID: 3257502475810279394, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
+      propertyPath: Datas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e39a649b97057034c9cbced862a7cd8f, type: 2}
     - target: {fileID: 5711984571416733430, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -462,5 +466,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 9169503402247604097, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
+      propertyPath: Datas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ac5de0757efbd114c9f1cd925b704af5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
