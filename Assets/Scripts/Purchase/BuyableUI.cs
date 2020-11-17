@@ -1,8 +1,5 @@
-﻿using Resources;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+
 public class BuyableUI : MonoBehaviour
 {
     public Buyable buyable;
@@ -11,6 +8,7 @@ public class BuyableUI : MonoBehaviour
     void Update()
     {
         buyable.TradeResource();
+        Debug.Log(buyable.ItemBought);
     }
 
 }
