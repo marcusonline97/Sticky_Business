@@ -8,7 +8,7 @@ using TMPro;
 */
 
 
-public class Date : MonoBehaviour
+public class Datesss : MonoBehaviour
 {
     // Activate for testing
     //public TextMeshPro dateText;
