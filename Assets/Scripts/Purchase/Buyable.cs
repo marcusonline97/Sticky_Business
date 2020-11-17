@@ -11,7 +11,7 @@ public class Buyable : ScriptableObject
     public Resource Resource;
     public Resource BuyableItem;
 
-    public bool CanBuyItem
+    public bool CanTradeItem
     {
         get
         {
@@ -19,9 +19,9 @@ public class Buyable : ScriptableObject
         }
     }
 
-    public void BuyHoneyJar()
+    public void TradeResource()
     {
-        if (CanBuyItem) 
+        if (CanTradeItem) 
         { 
         Resource.OwnedResource -= Price;
 

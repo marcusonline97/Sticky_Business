@@ -10,7 +10,7 @@ public class BuyableUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        buyable.BuyHoneyJar();
+        buyable.TradeResource();
     }
 
 }
