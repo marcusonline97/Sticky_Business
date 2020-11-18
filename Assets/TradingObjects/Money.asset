@@ -15,3 +15,4 @@ MonoBehaviour:
   Price: 1
   Resource: {fileID: 11400000, guid: 9a7a86f428b974743a8adda376f3813b, type: 2}
   BuyableItem: {fileID: 11400000, guid: 394519a36ea81ac4ab8c09043749c0c3, type: 2}
+  ItemBought: 0
