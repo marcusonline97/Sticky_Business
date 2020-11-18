@@ -10,7 +10,7 @@ public class Data : ScriptableObject {
         [SerializeField] ResourceAmount Production;
         [SerializeField] float ProductionMultiplier = 1.05f;
 
-        
+        [SerializeField] ResourceAmount ResourceUsage;
 
         public ResourceAmount TotalCost(int Amount) {
             var Result = this.Costs;
@@ -23,6 +23,11 @@ public class Data : ScriptableObject {
             var result = this.Production;
             result.Amount = Mathf.RoundToInt(result.Amount * Mathf.Pow(this.ProductionMultiplier, upgradeAmount) * unitCount);
             return result;
+        }
+
+        public ResourceAmount ResourceRemove(int Amount) {
+            var UsageResult = this.ResourceUsage;
+            return UsageResult;
         }
     }
 }

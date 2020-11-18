@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 320518872275896499}
-  - component: {fileID: 320518872275896498}
+  - component: {fileID: 1465417163}
+  - component: {fileID: 1465417165}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &320518872275896498
+--- !u!114 &1465417163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,13 +41,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 320518872275896501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8a644738063ea841ad154ff3bfbaf57, type: 3}
+  m_Script: {fileID: 11500000, guid: a7d982942ce1c6947a2c8e46a4f64b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ResetButton: 292
   EnterExitButtons:
   - {fileID: 0}
   - {fileID: 0}
-  EnterExitStore:
+  EnterExitMenu:
   - {fileID: 0}
   - {fileID: 0}
+  buyable: {fileID: 11400000, guid: d6b2428ff9f10334e94f11e15ffd7cf5, type: 2}
+  HoneyJar: {fileID: 7946840967832161626, guid: c37e2c7900505d9488629897eb7599b6, type: 3}
+--- !u!114 &1465417165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320518872275896501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7c21c0c48a3ef6409120e503acf96d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IdleCursorArrow: {fileID: 2800000, guid: d2a036b306ba36a439c2b52ce0d257a3, type: 3}
+  ClickedCursorArrow: {fileID: 2800000, guid: 790a9c2ad4d5758448a3c23d12947f9e, type: 3}
