@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hannas Design.unity
     guid: 24b360681a069401d9db5ca3b90cfa71
+  - enabled: 1
+    path: Assets/Scenes/HoneyHoney.unity
+    guid: aee022ae6840c4a879d6b5f454d74e96
   m_configObjects: {}
