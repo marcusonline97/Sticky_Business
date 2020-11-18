@@ -479,19 +479,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 320518872275896498, guid: 3a62318d563c96848a291e700ded7e5c, type: 3}
-      propertyPath: EnterExitMenu.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 320518872275896498, guid: 3a62318d563c96848a291e700ded7e5c, type: 3}
-      propertyPath: EnterExitButtons.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 320518872275896498, guid: 3a62318d563c96848a291e700ded7e5c, type: 3}
+    - target: {fileID: 1465417163, guid: 3a62318d563c96848a291e700ded7e5c, type: 3}
       propertyPath: EnterExitButtons.Array.data[0]
       value: 
       objectReference: {fileID: 1171771461}
-    - target: {fileID: 320518872275896498, guid: 3a62318d563c96848a291e700ded7e5c, type: 3}
+    - target: {fileID: 1465417163, guid: 3a62318d563c96848a291e700ded7e5c, type: 3}
       propertyPath: EnterExitButtons.Array.data[1]
       value: 
       objectReference: {fileID: 1171771458}
@@ -543,32 +535,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 320518872275896498, guid: 3a62318d563c96848a291e700ded7e5c, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a62318d563c96848a291e700ded7e5c, type: 3}
---- !u!1 &1465417162 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 320518872275896501, guid: 3a62318d563c96848a291e700ded7e5c, type: 3}
-  m_PrefabInstance: {fileID: 1465417161}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1465417163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465417162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7d982942ce1c6947a2c8e46a4f64b0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ResetButton: 292
-  EnterExitButtons:
-  - {fileID: 1171771461}
-  - {fileID: 1171771458}
-  EnterExitMenu:
-  - {fileID: 0}
-  - {fileID: 0}
-  buyable: {fileID: 11400000, guid: d6b2428ff9f10334e94f11e15ffd7cf5, type: 2}
-  HoneyJar: {fileID: 7946840967832161626, guid: c37e2c7900505d9488629897eb7599b6, type: 3}
