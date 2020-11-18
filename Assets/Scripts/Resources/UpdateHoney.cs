@@ -16,7 +16,7 @@ namespace Resources
         // Update is called once per frame
         void Update()
         {
-            ResourceProducer.Prefab.UpdateProduction();
+            //ResourceProducer.Prefab.UpdateProduction();
 
         }
     }

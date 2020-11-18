@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Seller
   m_EditorClassIdentifier: 
   Costs:
-    Amount: 10
-    ResourceType: {fileID: 11400000, guid: 394519a36ea81ac4ab8c09043749c0c3, type: 2}
+    Amount: 1
+    ResourceType: {fileID: 11400000, guid: 149e24be02f4930439a7227368299caf, type: 2}
   CostMultipier: 1.1
-  ProductionTime: 10
+  ProductionTime: 1
   Production:
     Amount: 1
     ResourceType: {fileID: 11400000, guid: 394519a36ea81ac4ab8c09043749c0c3, type: 2}
   ProductionMultiplier: 1.05
+  ResourceUsage:
+    Amount: 10
+    ResourceType: {fileID: 11400000, guid: 9a7a86f428b974743a8adda376f3813b, type: 2}
