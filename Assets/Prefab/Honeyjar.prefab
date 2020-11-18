@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7946840967832161638}
   - component: {fileID: 7946840967832161637}
   - component: {fileID: 4773424521151492910}
-  - component: {fileID: 2648849933796964136}
+  - component: {fileID: 2329124624220065268}
   m_Layer: 5
   m_Name: Honeyjar
   m_TagString: Untagged
@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: 300}
+  m_AnchoredPosition: {x: 310, y: 270}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7946840967832161638
@@ -98,7 +98,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2648849933796964136
+--- !u!114 &2329124624220065268
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,12 +107,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7946840967832161626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 365b6e8708984864aa1f4ac4ef4b06ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 30c05e0704b77b540a0a058766715e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LaunchForce: 150
-  HalfPoint: 700
-  Speed: 2.5
-  Offset: 0.5
-  Money: {fileID: 886755833702824182, guid: 6f56bcabd818ba64b9cfd40a8fa0c0fd, type: 3}
-  XForce: 5
+  Speed: 5
+  hasFaded: 0
+  maxtime: 1
+  fadetime: 0.3
