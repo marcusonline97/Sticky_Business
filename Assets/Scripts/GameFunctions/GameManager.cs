@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
                 if (EnterExitMenu[i].MenuActive)
                 {
                     Time.timeScale = TimeScales[0];
+                    break;
                 }
                 else
                 {
