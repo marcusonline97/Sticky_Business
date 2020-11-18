@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class MoneySpawn : MonoBehaviour
+public class SpawnItem: MonoBehaviour
 {
     Rigidbody2D rb;
     float YForce = 10;
