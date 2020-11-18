@@ -10,7 +10,8 @@ public class MoneySpawn : MonoBehaviour
     public bool hasFaded;
     Image img;
     float time;
-    float maxtime = .3f;
+    public float maxtime;
+    public float fadetime;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +32,9 @@ public class MoneySpawn : MonoBehaviour
             time += Time.deltaTime;
             if (time >= maxtime)
             {
-                Destroy(this);
                 hasFaded = false;
                 time = 0;
+                Destroy(gameObject);
             }
         }
 
@@ -41,7 +42,7 @@ public class MoneySpawn : MonoBehaviour
 
     void FadeOut()
     {
-        img.CrossFadeAlpha(0, 1, false);
+        img.CrossFadeAlpha(0, fadetime, false);
         hasFaded = true;
     }
 }

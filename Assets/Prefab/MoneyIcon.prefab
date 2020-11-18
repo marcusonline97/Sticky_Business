@@ -111,3 +111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
+  hasFaded: 0
+  maxtime: 1
+  fadetime: 0.3

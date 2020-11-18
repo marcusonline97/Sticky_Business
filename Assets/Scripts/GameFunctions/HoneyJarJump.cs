@@ -54,8 +54,7 @@ public class HoneyJarJump : MonoBehaviour
     {
         if (transform.position.x >= Target.transform.position.x - Offset)
         {
-            GameObject money = Instantiate(Money);
-            money.transform.SetParent(GameObject.FindGameObjectWithTag("SellButton").transform, false);
+            
             Destroy(gameObject);
         }
 
