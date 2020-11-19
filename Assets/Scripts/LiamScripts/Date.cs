@@ -17,6 +17,7 @@ public class Date : MonoBehaviour
     int[] currentDateArray = new int[Enum.GetNames(typeof(Calender)).Length];
     int[] savedDateArray = new int[Enum.GetNames(typeof(Calender)).Length];
     private const string saveName = "Last login date: ";
+    private const string DailyStreakCount = "DailyStreakCount: ";
     private const string arrayLengthSaveName = "Array length: ";
     private const string currentlyUsedSaveFile = "Currently Used SaveFile: ";
     
@@ -28,6 +29,17 @@ public class Date : MonoBehaviour
         Hour,
         Minute,
         Second
+    }
+
+    void Start()
+    {
+        var getLoadSave = PlayerPrefs.GetString(currentlyUsedSaveFile, "default");
+        dailyStreak = PlayerPrefs.GetInt(currentlyUsedSaveFile + getLoadSave + DailyStreakCount, 0);
+    }
+
+    void OnApplicationQuit()
+    {
+        
     }
     
     void UpdateCurrentLogin()
@@ -69,26 +81,20 @@ public class Date : MonoBehaviour
     
     public void SaveArrayToPlayerPref(int[] arrayToSave)
     {
-        for (int i = 0; i < arrayToSave.Length; i++)
-        {
-            var getSaveName = PlayerPrefs.GetString(currentlyUsedSaveFile, "default");
-            PlayerPrefs.SetInt(saveName + getSaveName + i, arrayToSave[i]);
-            PlayerPrefs.SetInt(saveName + arrayLengthSaveName + getSaveName, arrayToSave.Length);
-        }
+        var getLoadName = PlayerPrefs.GetString(currentlyUsedSaveFile, "default");
+        for (int i = 0; i < arrayToSave.Length; i++) PlayerPrefs.SetInt(saveName + i + getLoadName, arrayToSave[i]);
+        PlayerPrefs.SetInt(saveName + arrayLengthSaveName + getLoadName, arrayToSave.Length);
  
     }
     // Converts values from an Array into playerPrefs values
     
     public int[] GetArrayFromPlayerPref()
     {
-        var getSaveName = PlayerPrefs.GetString(currentlyUsedSaveFile, "default");
-        int[] reconstructedArray = new int[PlayerPrefs.GetInt(saveName + arrayLengthSaveName + getSaveName)];
+        var getLoadName = PlayerPrefs.GetString(currentlyUsedSaveFile, "default");
+        int[] reconstructedArray = new int[PlayerPrefs.GetInt(saveName + arrayLengthSaveName + getLoadName)];
  
-        for (int i = 0; i < reconstructedArray.Length; i++)
-        {
-            reconstructedArray[i] = PlayerPrefs.GetInt(saveName + getSaveName + i);
-        }
- 
+        for (int i = 0; i < reconstructedArray.Length; i++) reconstructedArray[i] = PlayerPrefs.GetInt(saveName + i + getLoadName);
+
         return reconstructedArray;
     }
     // Converts values from playerPrefs into an array
