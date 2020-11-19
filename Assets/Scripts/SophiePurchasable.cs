@@ -34,11 +34,11 @@ namespace Resources
 			if (!this.IsPurchasable)
 				return;
 
-			if (resourceamount.Amount > 0)
-			{
+			
+			//{
 				this.ResourceData.TotalCost(this.Amount).RemoveResource();
 				this.Amount += 1;
-			}
+			//}
 			//UpdateCostLabel();
 		}
 

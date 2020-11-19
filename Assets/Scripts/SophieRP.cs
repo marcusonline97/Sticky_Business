@@ -11,8 +11,6 @@ namespace Resources
 		public SophiePurchasable amount;
 		public SophiePurchasable upgrade;
 		public SophiePurchasable usage;
-
-		public ResourceAmount resource;
 		float elapsedTime;
 
 		public void SetUp(Data data)
@@ -32,7 +30,10 @@ namespace Resources
 		void Update()
 		{
 			UpdateProduction();
-			Debug.Log(resource.Amount);
+			//UpdateTitleLabel();
+			//this.amount.Update();
+			//this.upgrade.Update();
+			//this.usage.Update();
 		}
 
 		void UpdateProduction()
@@ -45,6 +46,16 @@ namespace Resources
 				this.elapsedTime -= this.Data.ProductionTime;
 			}
 		}
+
+		//void UpdateTitleLabel()
+		//{
+		//	this.titleText.text = ToString();
+		//}
+
+		//public override string ToString()
+		//{
+		//	return $"You have {this.amount.Amount} {this.Data.name} Level {this.upgrade.Amount}";
+		//}
 
 		void Produce()
 		{

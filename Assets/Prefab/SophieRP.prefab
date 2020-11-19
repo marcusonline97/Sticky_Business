@@ -59,3 +59,4 @@ MonoBehaviour:
   resource:
     Amount: 0
     ResourceType: {fileID: 11400000, guid: 9a7a86f428b974743a8adda376f3813b, type: 2}
+  Jars: {fileID: 11400000, guid: 9a7a86f428b974743a8adda376f3813b, type: 2}
