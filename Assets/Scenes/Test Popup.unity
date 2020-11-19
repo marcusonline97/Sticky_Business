@@ -400,6 +400,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1149455443}
     m_Modifications:
+    - target: {fileID: 1397323642688322809, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
+      propertyPath: m_text
+      value: Godmorgon!! Godm orgon! ! God mo r go n!! Go dmo rg on!! Godmorgon!!
+        Godmorgon!! Godmorgon!! Godmorgon!! Godmorgon!! Godmorgon!! Godmorgon!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397323642688322809, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397323642688322809, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4048383927
+      objectReference: {fileID: 0}
     - target: {fileID: 1397323643247128366, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -430,11 +443,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1397323643247128366, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 425
       objectReference: {fileID: 0}
     - target: {fileID: 1397323643247128366, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 275
       objectReference: {fileID: 0}
     - target: {fileID: 1397323643247128366, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
       propertyPath: m_LocalPosition.x
@@ -466,11 +479,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1397323643247128366, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 493
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 1397323643247128366, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 262
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1397323643247128366, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -486,8 +499,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1397323643247128367, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
       propertyPath: m_Name
-      value: PopUp Parent
+      value: PopUpController
       objectReference: {fileID: 0}
+    - target: {fileID: 1397323643957600239, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1397323644282536864, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8f07f224dff8e43159b2e74fd913fd73, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
 --- !u!1001 &8730367306865433218
@@ -567,11 +588,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8730367305667454770, guid: 954d6002cfa2a4a7e96433f85bd83d74, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 422
+      value: 524
       objectReference: {fileID: 0}
     - target: {fileID: 8730367305667454770, guid: 954d6002cfa2a4a7e96433f85bd83d74, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -366
+      value: -328
       objectReference: {fileID: 0}
     - target: {fileID: 8730367305667454770, guid: 954d6002cfa2a4a7e96433f85bd83d74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
