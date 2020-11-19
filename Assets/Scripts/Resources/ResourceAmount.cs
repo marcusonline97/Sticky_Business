@@ -5,7 +5,6 @@ namespace Resources{
     [System.Serializable]
     public struct ResourceAmount {
         public int Amount;
-        //public int UsageAmount;
         public Resource ResourceType;
 
         public override string ToString()
@@ -13,18 +12,17 @@ namespace Resources{
             return $"{this.Amount} {this.ResourceType.name}";
         }
         public bool Purchasable => this.ResourceType.OwnedResource >= this.Amount;
-
-        public void AddResource() {
+        public void AddResource() 
+        {
             this.ResourceType.OwnedResource += this.Amount;
         }
         public void RemoveResource()
         {
             this.ResourceType.OwnedResource -= this.Amount;
-            //this.ResourceType.OwnedResource -= this.UsageAmount;
         }
-        public ResourceAmount(int Amount, Resource ResourceType, int UsageAmount) {
+
+        public ResourceAmount(int Amount, Resource ResourceType, int UsageAmount, Resource UsageResourceType) {
             this.Amount = Amount;
-            //this.UsageAmount = UsageAmount;
             this.ResourceType = ResourceType;
         }
 

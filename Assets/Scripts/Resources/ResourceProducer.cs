@@ -10,7 +10,6 @@ namespace Resources
 		[FormerlySerializedAs("Resource Amount Text")] public Text titleText;
 		public Purchasable amount;
 		public Purchasable upgrade;
-		public Purchasable usage;
 		float elapsedTime;
 
 		public void SetUp(Data data)
@@ -19,13 +18,10 @@ namespace Resources
 			this.gameObject.name = data.name;
 			this.amount.SetUp(data, $"{this.Data.name}");
 			this.upgrade.SetUp(data, "Upgrade");
-			this.usage.SetUp(data, "Usage");
 		}
-
+		
 		public void Purchase() => this.amount.Purchase();
 		public void Upgrade() => this.upgrade.Purchase();
-
-		public void Useble() => this.usage.Purchase();
 
 		void Update()
 		{
@@ -33,7 +29,6 @@ namespace Resources
 			UpdateTitleLabel();
 			this.amount.Update();
 			this.upgrade.Update();
-			this.usage.Update();
 		}
 
 		void UpdateProduction()
@@ -42,7 +37,6 @@ namespace Resources
 			if (this.elapsedTime >= this.Data.ProductionTime)
 			{
 				Produce();
-				Usage();
 				this.elapsedTime -= this.Data.ProductionTime;
 			}
 		}
@@ -57,20 +51,13 @@ namespace Resources
 			return $"You have {this.amount.Amount} {this.Data.name} Level {this.upgrade.Amount}";
 		}
 
+		
 		void Produce()
 		{
-			if (this.amount.Amount == 0)
-				return;
+			if(this.amount.Amount == 0)
+			return;
 			var productionAmount = this.Data.ResourceAdd(this.upgrade.Amount, this.amount.Amount);
 			productionAmount.AddResource();
-			
-		}
-		void Usage()
-		{
-			if (this.amount.Amount == 0)
-				return;
-			var productionUsage = this.Data.ResourceRemove(this.amount.Amount);
-			productionUsage.RemoveResource();
 		}
 	}
 }

@@ -12,13 +12,20 @@ namespace Resources
 		string ProductId;
 		private const string currentlyUsedSaveFile = "Currently Used SaveFile: ";
 
-		bool IsPurchasable => this.ResourceData.TotalCost(this.Amount).Purchasable;
+		public bool IsPurchasable => this.ResourceData.TotalCost(this.Amount).Purchasable;
 
-		public int Amount {
+		/*
+		public int Amount
+		{
 			get => PlayerPrefs.GetInt(this.ResourceData.name + "_" + this.ProductId + PlayerPrefs.GetString(currentlyUsedSaveFile, "default"), 0);
 			private set => PlayerPrefs.SetInt(this.ResourceData.name + "_" + this.ProductId + PlayerPrefs.GetString(currentlyUsedSaveFile), value);
 		}
-
+		*/
+		public int Amount {
+			get => PlayerPrefs.GetInt(this.ResourceData.name + "_" + this.ProductId, 0);
+			private set => PlayerPrefs.SetInt(this.ResourceData.name + "_" + this.ProductId, value);
+		}
+		
 		public void SetUp(Data ResourceData, string ProductId) {
 			this.ResourceData = ResourceData;
 			this.ProductId = ProductId;
@@ -32,13 +39,12 @@ namespace Resources
 			this.Amount += 1;
 			UpdateCostLabel();
 		}
-
 		void UpdateCostLabel() {
 			var updatedCosts = this.ResourceData.TotalCost(this.Amount);
 			this.ButtonLable.text = $"Buy {this.ProductId} for {updatedCosts}";
 		}
 
 		public void Update() => UpdateTextColor();
-		void UpdateTextColor() => this.ButtonLable.color = this.IsPurchasable ? Color.white : Color.red;
+		void UpdateTextColor() => this.ButtonLable.color = this.IsPurchasable ? Color.black : Color.red;
 	}
 }
