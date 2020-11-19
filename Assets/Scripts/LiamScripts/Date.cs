@@ -68,9 +68,6 @@ public class Date : MonoBehaviour
         long elapsedTicks = currentDate.Ticks - savedDate.Ticks;
         
         TimeSpan elapsedSpan = new TimeSpan(elapsedTicks);
-        Debug.Log(currentDate.Ticks - savedDate.Ticks);
-        Debug.Log(elapsedSpan.Days.ToString());
-
 
         if (elapsedSpan.Days >= 1)
         {
