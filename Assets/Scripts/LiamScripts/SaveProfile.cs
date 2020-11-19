@@ -26,9 +26,11 @@ public class SaveProfile : MonoBehaviour
             
             int getLength = PlayerPrefs.GetInt(buttonSaveNames + length, 0);
             PlayerPrefs.SetInt(buttonSaveNames + length, getLength + 1);
+            Debug.Log(saveName + "savename");
             PlayerPrefs.SetString(currentlyUsedSaveFile, saveName);
+            Debug.Log(PlayerPrefs.GetString(currentlyUsedSaveFile));
             PlayerPrefs.SetString(buttonSaveNames + PlayerPrefs.GetInt(buttonSaveNames + length).ToString(), saveName);
-            loadSceneScript.LoadScene();
+            loadSceneScript.NewGameLoadScene();
             return;
         }
         saveName = "";

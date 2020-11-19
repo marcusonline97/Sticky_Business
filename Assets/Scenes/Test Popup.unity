@@ -507,6 +507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PopUpController
       objectReference: {fileID: 0}
+    - target: {fileID: 1397323643247128367, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1397323643957600239, guid: 35bcd1be1ec76427dad3a5724b79b552, type: 3}
       propertyPath: m_text
       value: 
