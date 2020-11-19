@@ -1,11 +1,6 @@
 ﻿using System;
 using UnityEngine;
-
-/* Activate for testing
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-*/
+using UnityEngine.UI;
 
 
 public class Date : MonoBehaviour
@@ -14,10 +9,11 @@ public class Date : MonoBehaviour
     //public TextMeshPro dateText;
     
     public int dailyStreak;
+    public Text textToChange;
     int[] currentDateArray = new int[Enum.GetNames(typeof(Calender)).Length];
     int[] savedDateArray = new int[Enum.GetNames(typeof(Calender)).Length];
     private const string saveName = "Last login date: ";
-    private const string DailyStreakCount = "DailyStreakCount: ";
+    private const string dailyStreakCount = "DailyStreakCount: ";
     private const string arrayLengthSaveName = "Array length: ";
     private const string currentlyUsedSaveFile = "Currently Used SaveFile: ";
     
@@ -34,15 +30,11 @@ public class Date : MonoBehaviour
     void Start()
     {
         var getLoadSave = PlayerPrefs.GetString(currentlyUsedSaveFile, "default");
-        dailyStreak = PlayerPrefs.GetInt(currentlyUsedSaveFile + getLoadSave + DailyStreakCount, 0);
+        dailyStreak = PlayerPrefs.GetInt(currentlyUsedSaveFile + getLoadSave + dailyStreakCount, 0);
+        textToChange.text = "Daily Streak: " + DailyStreakAmount().ToString();
     }
 
-    void OnApplicationQuit()
-    {
-        
-    }
-    
-    void UpdateCurrentLogin()
+    public int[] UpdateCurrentLogin()
     {
         currentDateArray[(int) Calender.Year] = DateTime.Today.Year;
         currentDateArray[(int) Calender.Month] = DateTime.Today.Month;
@@ -50,6 +42,7 @@ public class Date : MonoBehaviour
         currentDateArray[(int) Calender.Hour] = DateTime.Now.Hour;
         currentDateArray[(int) Calender.Minute] = DateTime.Now.Minute;
         currentDateArray[(int) Calender.Second] = DateTime.Now.Second;
+        return currentDateArray;
     }
 
     public int DailyStreakAmount()
@@ -71,8 +64,8 @@ public class Date : MonoBehaviour
         if (elapsedSpan.Days < 1) return dailyStreak;
         else if (elapsedSpan.Days < 2)
         {
-            UpdateCurrentLogin();
-            SaveArrayToPlayerPref(currentDateArray);
+            var array = UpdateCurrentLogin();
+            SaveArrayToPlayerPref(array);
             return dailyStreak++;
         }
         else return dailyStreak = 0;
