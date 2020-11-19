@@ -1,7 +1,7 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
 
 public class Date : MonoBehaviour
 {
@@ -9,7 +9,7 @@ public class Date : MonoBehaviour
     //public TextMeshPro dateText;
     
     public int dailyStreak;
-    public Text textToChange;
+    public TMP_Text textToChange;
     int[] currentDateArray = new int[Enum.GetNames(typeof(Calender)).Length];
     int[] savedDateArray = new int[Enum.GetNames(typeof(Calender)).Length];
     private const string saveName = "Last login date: ";
@@ -30,6 +30,8 @@ public class Date : MonoBehaviour
     void Start()
     {
         var getLoadSave = PlayerPrefs.GetString(currentlyUsedSaveFile, "default");
+        
+        //if (PlayerPrefs.GetString())
         dailyStreak = PlayerPrefs.GetInt(currentlyUsedSaveFile + getLoadSave + dailyStreakCount, 0);
         textToChange.text = "Daily Streak: " + DailyStreakAmount().ToString();
     }
@@ -47,16 +49,23 @@ public class Date : MonoBehaviour
 
     public int DailyStreakAmount()
     {
+        DateTime savedDate = new DateTime();
         savedDateArray = GetArrayFromPlayerPref();
-        DateTime savedDate = new DateTime(
-            savedDateArray[(int) Calender.Year], 
-            savedDateArray[(int) Calender.Month], 
-            savedDateArray[(int) Calender.Day],
-            savedDateArray[(int) Calender.Hour],
-            savedDateArray[(int) Calender.Minute],
-            savedDateArray[(int) Calender.Second]
-            );
-
+        
+        if (savedDateArray[(int) Calender.Year] == 0) savedDate = DateTime.Now;
+        else 
+        {
+            savedDate = new DateTime(
+                savedDateArray[(int) Calender.Year], 
+                savedDateArray[(int) Calender.Month], 
+                savedDateArray[(int) Calender.Day],
+                savedDateArray[(int) Calender.Hour],
+                savedDateArray[(int) Calender.Minute],
+                savedDateArray[(int) Calender.Second]); 
+        }
+        
+        Debug.Log("Breaks");
+        
         DateTime currentDate = DateTime.Now;
         long elapsedTicks = currentDate.Ticks - savedDate.Ticks;
         TimeSpan elapsedSpan = new TimeSpan(elapsedTicks);
@@ -84,7 +93,7 @@ public class Date : MonoBehaviour
     public int[] GetArrayFromPlayerPref()
     {
         var getLoadName = PlayerPrefs.GetString(currentlyUsedSaveFile, "default");
-        int[] reconstructedArray = new int[PlayerPrefs.GetInt(saveName + arrayLengthSaveName + getLoadName)];
+        int[] reconstructedArray = new int[PlayerPrefs.GetInt(saveName + arrayLengthSaveName + getLoadName, 6)];
  
         for (int i = 0; i < reconstructedArray.Length; i++) reconstructedArray[i] = PlayerPrefs.GetInt(saveName + i + getLoadName);
 
