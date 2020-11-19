@@ -22,8 +22,8 @@ namespace Resources
 		}
 		*/
 		public int Amount {
-			get => PlayerPrefs.GetInt(this.ResourceData.name + "_" + this.ProductId, 0);
-			private set => PlayerPrefs.SetInt(this.ResourceData.name + "_" + this.ProductId, value);
+			get => PlayerPrefs.GetInt(PlayerPrefs.GetString(currentlyUsedSaveFile, "default") + this.ResourceData.name + "_" + this.ProductId, 0);
+			private set => PlayerPrefs.SetInt(PlayerPrefs.GetString(currentlyUsedSaveFile) + this.ResourceData.name + "_" + this.ProductId, value);
 		}
 		
 		public void SetUp(Data ResourceData, string ProductId) {

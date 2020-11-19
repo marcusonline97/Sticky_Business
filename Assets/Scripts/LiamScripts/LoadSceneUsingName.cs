@@ -9,9 +9,9 @@ public class LoadSceneUsingName : MonoBehaviour
     public string nameOfScene;
     private const string currentlyUsedSaveFile = "Currently Used SaveFile: ";
     
-    public void LoadScene(bool loaded)
+    public void LoadScene()
     {
-        if (loadSave && loaded) PlayerPrefs.SetString(currentlyUsedSaveFile, nameOfButton.ToString());
+        if (loadSave) PlayerPrefs.SetString(currentlyUsedSaveFile, nameOfButton.ToString());
         SceneManager.LoadScene(nameOfScene);
     }
 }

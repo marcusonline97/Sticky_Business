@@ -26,8 +26,8 @@ namespace Resources
 		*/
 		public int DealerAmount
 		{
-			get => PlayerPrefs.GetInt(this.ResourceData.name + "_" + this.DealerProductId, 0);
-			private set => PlayerPrefs.SetInt(this.ResourceData.name + "_" + this.DealerProductId, value);
+			get => PlayerPrefs.GetInt(PlayerPrefs.GetString(currentlyUsedSaveFile, "default") + this.ResourceData.name + "_" + this.DealerProductId, 0);
+			private set => PlayerPrefs.SetInt(PlayerPrefs.GetString(currentlyUsedSaveFile, "default") + this.ResourceData.name + "_" + this.DealerProductId, value);
 		}
 
 		public void DealerSetUp(DealerData ResourceData, string DealerProductId)

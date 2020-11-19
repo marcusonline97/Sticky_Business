@@ -28,7 +28,7 @@ public class SaveProfile : MonoBehaviour
             PlayerPrefs.SetInt(buttonSaveNames + length, getLength + 1);
             PlayerPrefs.SetString(currentlyUsedSaveFile, saveName);
             PlayerPrefs.SetString(buttonSaveNames + PlayerPrefs.GetInt(buttonSaveNames + length).ToString(), saveName);
-            loadSceneScript.LoadScene(false);
+            loadSceneScript.LoadScene();
             return;
         }
         saveName = "";
