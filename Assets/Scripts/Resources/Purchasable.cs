@@ -10,12 +10,13 @@ namespace Resources
 		public Text ButtonLable;
 		Data ResourceData;
 		string ProductId;
+		private const string currentlyUsedSaveFile = "Currently Used SaveFile: ";
 
 		bool IsPurchasable => this.ResourceData.TotalCost(this.Amount).Purchasable;
 
 		public int Amount {
-			get => PlayerPrefs.GetInt(this.ResourceData.name+"_"+this.ProductId, 0);
-			private set => PlayerPrefs.SetInt(this.ResourceData.name+"_"+this.ProductId, value);
+			get => PlayerPrefs.GetInt(this.ResourceData.name + "_" + this.ProductId + PlayerPrefs.GetString(currentlyUsedSaveFile, "default"), 0);
+			private set => PlayerPrefs.SetInt(this.ResourceData.name + "_" + this.ProductId + PlayerPrefs.GetString(currentlyUsedSaveFile), value);
 		}
 
 		public void SetUp(Data ResourceData, string ProductId) {
