@@ -6,13 +6,19 @@ namespace Resources
     [CreateAssetMenu(menuName = "ResourceProduction/DealerData", fileName = "DealerResourceProductionData")]
     public class DealerData : ScriptableObject
     {
+        private const string currentlyUsedSaveFile = "Currently Used SaveFile: ";
+
         [SerializeField] DealerResourceAmount DealerCosts;
         [SerializeField] float DealerCostMultipier = 1.1f;
         public float DealerProductionTime = 10f;
         [SerializeField] DealerResourceAmount DealerProduction;
         [SerializeField] float DealerProductionMultiplier = 1.05f;
         [SerializeField] DealerResourceAmount DealerResourceUsage;
-        public int DealersAmount = 0;
+        public int DealersAmount
+        {
+            get => PlayerPrefs.GetInt(PlayerPrefs.GetString(currentlyUsedSaveFile, "default") + this.name, 0);
+            set => PlayerPrefs.SetInt(PlayerPrefs.GetString(currentlyUsedSaveFile, "default") + this.name, value);
+        }
 
         public DealerResourceAmount DealerTotalCost(int DealerAmount)
         {

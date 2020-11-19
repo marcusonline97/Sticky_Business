@@ -24,4 +24,4 @@ MonoBehaviour:
   DealerResourceUsage:
     DealerAmount: 1
     DealerResourceType: {fileID: 11400000, guid: 9a7a86f428b974743a8adda376f3813b, type: 2}
-  DealersAmount: 22
+  DealersAmount: 1
