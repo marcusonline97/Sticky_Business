@@ -2242,7 +2242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2556157835972411311, guid: 3c1e4bc741dcf4f7eb345f0c9d9ab7e7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2556157835972411311, guid: 3c1e4bc741dcf4f7eb345f0c9d9ab7e7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2267,6 +2267,10 @@ PrefabInstance:
     - target: {fileID: 2556157835972411311, guid: 3c1e4bc741dcf4f7eb345f0c9d9ab7e7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3699949802427122286, guid: 3c1e4bc741dcf4f7eb345f0c9d9ab7e7, type: 3}
+      propertyPath: loadSave
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c1e4bc741dcf4f7eb345f0c9d9ab7e7, type: 3}
