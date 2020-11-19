@@ -12,8 +12,8 @@ namespace Resources
 
         public int OwnedResource
         {
-            get => PlayerPrefs.GetInt(PlayerPrefs.GetString(currentlyUsedSaveFile) + this.name, 0);
-            set => PlayerPrefs.SetInt(PlayerPrefs.GetString(currentlyUsedSaveFile) + this.name, value);
+            get => PlayerPrefs.GetInt(PlayerPrefs.GetString(currentlyUsedSaveFile, "default") + this.name, 0);
+            set => PlayerPrefs.SetInt(PlayerPrefs.GetString(currentlyUsedSaveFile, "default") + this.name, value);
         }
         public void Produce()
         {
