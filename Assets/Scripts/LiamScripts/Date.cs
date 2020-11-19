@@ -13,11 +13,12 @@ public class Date : MonoBehaviour
     // Activate for testing
     //public TextMeshPro dateText;
     
-    private const string saveName = "Last login date: ";
-    private const string arrayLengthSaveName = "Array length: ";
     public int dailyStreak;
     int[] currentDateArray = new int[Enum.GetNames(typeof(Calender)).Length];
     int[] savedDateArray = new int[Enum.GetNames(typeof(Calender)).Length];
+    private const string saveName = "Last login date: ";
+    private const string arrayLengthSaveName = "Array length: ";
+    private const string currentlyUsedSaveFile = "Currently Used SaveFile: ";
     
     enum Calender
     {
@@ -70,8 +71,9 @@ public class Date : MonoBehaviour
     {
         for (int i = 0; i < arrayToSave.Length; i++)
         {
-            PlayerPrefs.SetInt(saveName + i, arrayToSave[i]);
-            PlayerPrefs.SetInt(saveName + arrayLengthSaveName, arrayToSave.Length);
+            var getSaveName = PlayerPrefs.GetString(currentlyUsedSaveFile, "default");
+            PlayerPrefs.SetInt(saveName + getSaveName + i, arrayToSave[i]);
+            PlayerPrefs.SetInt(saveName + arrayLengthSaveName + getSaveName, arrayToSave.Length);
         }
  
     }
@@ -79,11 +81,12 @@ public class Date : MonoBehaviour
     
     public int[] GetArrayFromPlayerPref()
     {
-        int[] reconstructedArray = new int[PlayerPrefs.GetInt(saveName + arrayLengthSaveName)];
+        var getSaveName = PlayerPrefs.GetString(currentlyUsedSaveFile, "default");
+        int[] reconstructedArray = new int[PlayerPrefs.GetInt(saveName + arrayLengthSaveName + getSaveName)];
  
         for (int i = 0; i < reconstructedArray.Length; i++)
         {
-            reconstructedArray[i] = PlayerPrefs.GetInt(saveName + i);
+            reconstructedArray[i] = PlayerPrefs.GetInt(saveName + getSaveName + i);
         }
  
         return reconstructedArray;
