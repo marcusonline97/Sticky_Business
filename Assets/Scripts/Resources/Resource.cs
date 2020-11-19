@@ -12,8 +12,8 @@ namespace Resources
 
         public int OwnedResource
         {
-            get => PlayerPrefs.GetInt(this.name, 0);
-            set => PlayerPrefs.SetInt(this.name, value);
+            get => PlayerPrefs.GetInt(this.name, 0); // Save this information
+            set => PlayerPrefs.SetInt(this.name, value); // Save this information
         }
         public void Produce()
         {
