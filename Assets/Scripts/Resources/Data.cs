@@ -10,7 +10,7 @@ public class Data : ScriptableObject {
         [SerializeField] ResourceAmount Production;
         [SerializeField] float ProductionMultiplier = 1.05f;
 
-        [SerializeField] ResourceAmount ResourceUsage;
+        [SerializeField]public ResourceAmount ResourceUsage;
 
         public ResourceAmount TotalCost(int Amount) {
             var Result = this.Costs;
