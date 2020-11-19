@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         if (buyable.ItemBought)
         {
             GameObject Jar = Instantiate(HoneyJar);
-            Jar.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
+            Jar.transform.SetParent(GameObject.FindGameObjectWithTag("SpawnManager").transform, false);
 
         }
 

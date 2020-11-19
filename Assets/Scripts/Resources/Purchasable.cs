@@ -38,6 +38,6 @@ namespace Resources
 		}
 
 		public void Update() => UpdateTextColor();
-		void UpdateTextColor() => this.ButtonLable.color = this.IsPurchasable ? Color.black : Color.red;
+		void UpdateTextColor() => this.ButtonLable.color = this.IsPurchasable ? Color.white : Color.red;
 	}
 }
