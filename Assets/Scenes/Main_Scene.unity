@@ -1638,19 +1638,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 148150743, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 243012358, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1345540334}
+    - target: {fileID: 486494268, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
+      propertyPath: MoneySound
+      value: 
+      objectReference: {fileID: 2123991826}
     - target: {fileID: 520980032, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 682507062, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 987900463, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1670,27 +1674,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1115880007, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1610339530, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1630503040, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1719781796, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1900360851, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2019269587, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2061902447, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_Pivot.x
@@ -1978,7 +1982,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7605509308256306890, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7605509308256306891, guid: 881b52a66f9b0134091fe19fd88c911f, type: 3}
       propertyPath: m_IsActive
