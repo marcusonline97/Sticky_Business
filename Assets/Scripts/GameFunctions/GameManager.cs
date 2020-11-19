@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         {
             if (Input.GetKey(ResetButton))
             {
-                PlayerPrefs.DeleteAll();
+                PlayerPrefs.DeleteAll(); // Save this information
             }
         }
     }
