@@ -14,6 +14,7 @@ public class SaveProfile : MonoBehaviour
     public const string isAvailable = "Available";
     private const string buttonSaveNames = "Save Buttons ";
     private const string length = "length: ";
+    private const string currentlyUsedSaveFile = "Currently Used SaveFile: ";
 
     public void CreateSaveName()
     {
@@ -25,8 +26,9 @@ public class SaveProfile : MonoBehaviour
             
             int getLength = PlayerPrefs.GetInt(buttonSaveNames + length, 0);
             PlayerPrefs.SetInt(buttonSaveNames + length, getLength + 1);
+            PlayerPrefs.SetString(currentlyUsedSaveFile, saveName);
             PlayerPrefs.SetString(buttonSaveNames + PlayerPrefs.GetInt(buttonSaveNames + length).ToString(), saveName);
-            loadSceneScript.LoadScene();
+            loadSceneScript.LoadScene(false);
             return;
         }
         saveName = "";
@@ -37,11 +39,8 @@ public class SaveProfile : MonoBehaviour
 
     public void LoadButtons()
     { 
-        foreach (var button in buttonsList) 
-        { 
-            Destroy(button);
-        }
-        
+        foreach (var button in buttonsList) Destroy(button);
+
         for (int i = 1; i < PlayerPrefs.GetInt(buttonSaveNames + length, 0) + 1; i++)
         {
             var objButton = Instantiate(objOriginal, objParent.transform);

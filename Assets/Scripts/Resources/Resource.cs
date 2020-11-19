@@ -1,19 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Resources
 {
+
     [CreateAssetMenu]
     public class Resource : ScriptableObject
     {
+        private const string currentlyUsedSaveFile = "Currently Used SaveFile: ";
         public Color color;
         public int AmountPerClick = 1;
 
         public int OwnedResource
         {
-            get => PlayerPrefs.GetInt(this.name, 0); // Save this information
-            set => PlayerPrefs.SetInt(this.name, value); // Save this information
+            get => PlayerPrefs.GetInt(PlayerPrefs.GetString(currentlyUsedSaveFile) + this.name, 0);
+            set => PlayerPrefs.SetInt(PlayerPrefs.GetString(currentlyUsedSaveFile) + this.name, value);
         }
         public void Produce()
         {
