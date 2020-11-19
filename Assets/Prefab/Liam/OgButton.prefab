@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 2556157835972411309}
   - component: {fileID: 2556157835972411308}
   - component: {fileID: 2556157835972411311}
+  - component: {fileID: 3699949802427122286}
   m_Layer: 5
   m_Name: OgButton
   m_TagString: Untagged
@@ -199,3 +200,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3699949802427122286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556157835972411217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67915afc77b4e4e78b0d9afd0f74b9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadSave: 1
+  nameOfButton: {fileID: 2556157835608999013}
+  nameOfScene: Main_Scene

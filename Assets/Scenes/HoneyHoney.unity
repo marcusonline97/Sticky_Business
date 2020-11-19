@@ -1695,17 +1695,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861921624}
   m_CullTransparentMesh: 0
---- !u!114 &1073230633 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2556157835608999013, guid: 3c1e4bc741dcf4f7eb345f0c9d9ab7e7, type: 3}
-  m_PrefabInstance: {fileID: 1258956107}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1101470836
 GameObject:
   m_ObjectHideFlags: 0
@@ -2208,7 +2197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2556157835972411311, guid: 3c1e4bc741dcf4f7eb345f0c9d9ab7e7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2556157835972411311, guid: 3c1e4bc741dcf4f7eb345f0c9d9ab7e7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2227,6 +2216,10 @@ PrefabInstance:
       value: LoadSceneUsingName, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2556157835972411311, guid: 3c1e4bc741dcf4f7eb345f0c9d9ab7e7, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2556157835972411311, guid: 3c1e4bc741dcf4f7eb345f0c9d9ab7e7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -2242,11 +2235,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2556157835972411217, guid: 3c1e4bc741dcf4f7eb345f0c9d9ab7e7, type: 3}
   m_PrefabInstance: {fileID: 1258956107}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1320942451
+--- !u!114 &1320942451 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3699949802427122286, guid: 3c1e4bc741dcf4f7eb345f0c9d9ab7e7, type: 3}
+  m_PrefabInstance: {fileID: 1258956107}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320942450}
   m_Enabled: 1
@@ -2254,9 +2246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67915afc77b4e4e78b0d9afd0f74b9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadSave: 1
-  nameOfButton: {fileID: 1073230633}
-  nameOfScene: Main_Scene
 --- !u!1 &1428933489
 GameObject:
   m_ObjectHideFlags: 0
