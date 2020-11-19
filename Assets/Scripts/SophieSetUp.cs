@@ -4,18 +4,18 @@ using UnityEngine;
 using UnityEngine.Serialization;
 namespace Resources
 {
-    public class SophieSetUp : MonoBehaviour
-    {
-        public Data[] Datas;
-        public SophieRP Prefab;
+    //public class SophieSetUp : MonoBehaviour
+    //{
+    //    public Data[] Datas;
+    //    public SophieRP Prefab;
 
-        void Start()
-        {
-            foreach (var ProductionUnit in this.Datas)
-            {
-                var instance = Instantiate(this.Prefab, this.transform);
-                instance.SetUp(ProductionUnit);
-            }
-        }
-    }
+    //    void Start()
+    //    {
+    //        foreach (var ProductionUnit in this.Datas)
+    //        {
+    //            var instance = Instantiate(this.Prefab, this.transform);
+    //            instance.SetUp(ProductionUnit);
+    //        }
+    //    }
+    //}
 }

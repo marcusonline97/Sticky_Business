@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Datas:
-  - {fileID: 11400000, guid: 64fa771d360809947bd3f4c43b1cdd5e, type: 2}
+  - {fileID: 11400000, guid: 87bbd868c726ddf4aaea6a9e492c3df4, type: 2}
   Prefab: {fileID: 40511992148465584, guid: c3c8933548e9f4f40981d185c38410a9, type: 3}
 --- !u!222 &1888417783
 CanvasRenderer:
