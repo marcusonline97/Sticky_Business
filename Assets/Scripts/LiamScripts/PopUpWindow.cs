@@ -13,4 +13,9 @@ public class PopUpWindow : MonoBehaviour
         popUpText.text = text;
         animator.SetTrigger("pop");
     }
+    
+    public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        popUpBox.SetActive(false);
+    }
 }
