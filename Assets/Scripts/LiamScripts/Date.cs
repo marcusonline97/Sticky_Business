@@ -31,7 +31,6 @@ public class Date : MonoBehaviour
     {
         var getLoadSave = PlayerPrefs.GetString(currentlyUsedSaveFile, "default");
         
-        //if (PlayerPrefs.GetString())
         dailyStreak = PlayerPrefs.GetInt(currentlyUsedSaveFile + getLoadSave + dailyStreakCount, 0);
         textToChange.text = "Daily Streak: " + DailyStreakAmount().ToString();
     }
@@ -50,10 +49,11 @@ public class Date : MonoBehaviour
     public int DailyStreakAmount()
     {
         DateTime savedDate = new DateTime();
+        
         savedDateArray = GetArrayFromPlayerPref();
         
         if (savedDateArray[(int) Calender.Year] == 0) savedDate = DateTime.Now;
-        else 
+        else
         {
             savedDate = new DateTime(
                 savedDateArray[(int) Calender.Year], 
@@ -63,21 +63,27 @@ public class Date : MonoBehaviour
                 savedDateArray[(int) Calender.Minute],
                 savedDateArray[(int) Calender.Second]); 
         }
-        
-        Debug.Log("Breaks");
-        
+
         DateTime currentDate = DateTime.Now;
         long elapsedTicks = currentDate.Ticks - savedDate.Ticks;
+        
         TimeSpan elapsedSpan = new TimeSpan(elapsedTicks);
+        Debug.Log(currentDate.Ticks - savedDate.Ticks);
+        Debug.Log(elapsedSpan.Days.ToString());
 
-        if (elapsedSpan.Days < 1) return dailyStreak;
-        else if (elapsedSpan.Days < 2)
+
+        if (elapsedSpan.Days >= 1)
         {
+            if (elapsedSpan.Days < 2) dailyStreak++;
+            else dailyStreak = 0;
+            
             var array = UpdateCurrentLogin();
             SaveArrayToPlayerPref(array);
-            return dailyStreak++;
         }
-        else return dailyStreak = 0;
+
+        var getLoadSave = PlayerPrefs.GetString(currentlyUsedSaveFile, "default");
+        PlayerPrefs.SetInt(currentlyUsedSaveFile + getLoadSave + dailyStreakCount, dailyStreak);
+        return dailyStreak;
     }
     // Takes the saved date and compares with current date and acts accordingly
     
