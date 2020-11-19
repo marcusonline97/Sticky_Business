@@ -7,6 +7,7 @@ public class MoneyActivated : MonoBehaviour
     public Buyable buyable;
     public GameObject Money;
     public float time;
+    public AudioSource MoneySound;
 
     // Start is called before the first frame update
     void Start()
@@ -35,5 +36,6 @@ public class MoneyActivated : MonoBehaviour
     {
             GameObject money = Instantiate(Money);
             money.transform.SetParent(GameObject.FindGameObjectWithTag("SellButton").transform, false);
+            MoneySound.Play();
     }
 }
