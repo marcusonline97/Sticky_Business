@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06c6d35bc24131d42a9fae58b0639a4b, type: 3}
-  m_Name: Money
+  m_Name: JarsForMoney
   m_EditorClassIdentifier: 
   Price: 1
   Resource: {fileID: 11400000, guid: 9a7a86f428b974743a8adda376f3813b, type: 2}
