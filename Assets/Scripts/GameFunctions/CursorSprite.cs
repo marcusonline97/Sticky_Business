@@ -1,35 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CursorSprite : MonoBehaviour
 {
-
     public Texture2D IdleCursorArrow;
     public Texture2D ClickedCursorArrow;
+    Vector2 Offset = new Vector2(25, 10);
 
-    void Start()
-    {
-        Cursor.SetCursor(IdleCursorArrow, Vector2.zero, CursorMode.ForceSoftware);
-        
-    }
-    private void Update()
-    {
-        ChangeSprite();
-
-
-    }
-    void ChangeSprite()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            Cursor.SetCursor(ClickedCursorArrow, Vector2.zero, CursorMode.ForceSoftware);
-
-        }
-        else
-        {
-            Cursor.SetCursor(IdleCursorArrow, Vector2.zero, CursorMode.ForceSoftware);
-
-        }
-    }
+    void Start() => Cursor.SetCursor(IdleCursorArrow, Offset, CursorMode.ForceSoftware);
+    private void Update() =>
+        Cursor.SetCursor(Input.GetMouseButton(0) ? ClickedCursorArrow :
+            IdleCursorArrow, Offset, CursorMode.ForceSoftware);
 }
