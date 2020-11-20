@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dealer
   m_EditorClassIdentifier: 
   DealerCosts:
-    DealerAmount: 3
+    DealerAmount: 6
     DealerResourceType: {fileID: 11400000, guid: 394519a36ea81ac4ab8c09043749c0c3, type: 2}
   DealerCostMultipier: 1.1
   DealerProductionTime: 1
@@ -24,4 +24,3 @@ MonoBehaviour:
   DealerResourceUsage:
     DealerAmount: 1
     DealerResourceType: {fileID: 11400000, guid: 9a7a86f428b974743a8adda376f3813b, type: 2}
-  DealersAmount: 1
