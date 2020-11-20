@@ -13,14 +13,11 @@ MonoBehaviour:
   m_Name: Worker
   m_EditorClassIdentifier: 
   Costs:
-    Amount: 1
+    Amount: 30
     ResourceType: {fileID: 11400000, guid: 394519a36ea81ac4ab8c09043749c0c3, type: 2}
   CostMultipier: 1.1
-  ProductionTime: 1
+  ProductionTime: 1.5
   Production:
     Amount: 1
     ResourceType: {fileID: 11400000, guid: 149e24be02f4930439a7227368299caf, type: 2}
-  ProductionMultiplier: 1.05
-  ResourceUsage:
-    Amount: 0
-    ResourceType: {fileID: 11400000, guid: 0899e05947625b4449c096f18317d2b0, type: 2}
+  ProductionMultiplier: 1.01
